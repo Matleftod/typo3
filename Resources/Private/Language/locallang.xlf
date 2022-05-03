@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:beer_ntmjm/Resources/Private/Language/locallang.xlf" date="2022-05-03T09:25:05Z" product-name="beer_ntmjm">
+		<header/>
+		<body>
+			<trans-unit id="tx_beerntmjm_domain_model_beer" resname="tx_beerntmjm_domain_model_beer">
+				<source>Beer</source>
+			</trans-unit>
+			<trans-unit id="tx_beerntmjm_domain_model_beer.name" resname="tx_beerntmjm_domain_model_beer.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_beerntmjm_domain_model_beer.image" resname="tx_beerntmjm_domain_model_beer.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_beerntmjm_domain_model_beer.flavour" resname="tx_beerntmjm_domain_model_beer.flavour">
+				<source>Flavour</source>
+			</trans-unit>
+			<trans-unit id="tx_beerntmjm_domain_model_beer.description" resname="tx_beerntmjm_domain_model_beer.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_beerntmjm_domain_model_beer.degree" resname="tx_beerntmjm_domain_model_beer.degree">
+				<source>Degree</source>
+			</trans-unit>
+			<trans-unit id="tx_beerntmjm_domain_model_beer.type" resname="tx_beerntmjm_domain_model_beer.type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="tx_beerntmjm_domain_model_beer.ingredients" resname="tx_beerntmjm_domain_model_beer.ingredients">
+				<source>Ingredients</source>
+			</trans-unit>
+			<trans-unit id="tx_beerntmjm_domain_model_beer.country" resname="tx_beerntmjm_domain_model_beer.country">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="tx_beerntmjm_domain_model_beer.reviews" resname="tx_beerntmjm_domain_model_beer.reviews">
+				<source>Reviews</source>
+			</trans-unit>
+			<trans-unit id="tx_beerntmjm_domain_model_beer.brand" resname="tx_beerntmjm_domain_model_beer.brand">
+				<source>Brand</source>
+			</trans-unit>
+			<trans-unit id="tx_beerntmjm_domain_model_beer.theme" resname="tx_beerntmjm_domain_model_beer.theme">
+				<source>Theme</source>
+			</trans-unit>
+			<trans-unit id="tx_beerntmjm_domain_model_type" resname="tx_beerntmjm_domain_model_type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="tx_beerntmjm_domain_model_type.libelle" resname="tx_beerntmjm_domain_model_type.libelle">
+				<source>Libelle</source>
+			</trans-unit>
+			<trans-unit id="tx_beerntmjm_domain_model_ingredient" resname="tx_beerntmjm_domain_model_ingredient">
+				<source>Ingredient</source>
+			</trans-unit>
+			<trans-unit id="tx_beerntmjm_domain_model_ingredient.libelle" resname="tx_beerntmjm_domain_model_ingredient.libelle">
+				<source>Libelle</source>
+			</trans-unit>
+			<trans-unit id="tx_beerntmjm_domain_model_country" resname="tx_beerntmjm_domain_model_country">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="tx_beerntmjm_domain_model_country.libelle" resname="tx_beerntmjm_domain_model_country.libelle">
+				<source>Libelle</source>
+			</trans-unit>
+			<trans-unit id="tx_beerntmjm_domain_model_review" resname="tx_beerntmjm_domain_model_review">
+				<source>Review</source>
+			</trans-unit>
+			<trans-unit id="tx_beerntmjm_domain_model_review.content" resname="tx_beerntmjm_domain_model_review.content">
+				<source>Content</source>
+			</trans-unit>
+			<trans-unit id="tx_beerntmjm_domain_model_review.mark" resname="tx_beerntmjm_domain_model_review.mark">
+				<source>Mark</source>
+			</trans-unit>
+			<trans-unit id="tx_beerntmjm_domain_model_review.username" resname="tx_beerntmjm_domain_model_review.username">
+				<source>Username</source>
+			</trans-unit>
+			<trans-unit id="tx_beerntmjm_domain_model_review.date" resname="tx_beerntmjm_domain_model_review.date">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="tx_beerntmjm_domain_model_review.validated" resname="tx_beerntmjm_domain_model_review.validated">
+				<source>Validated</source>
+			</trans-unit>
+			<trans-unit id="tx_beerntmjm_domain_model_brand" resname="tx_beerntmjm_domain_model_brand">
+				<source>Brand</source>
+			</trans-unit>
+			<trans-unit id="tx_beerntmjm_domain_model_brand.libelle" resname="tx_beerntmjm_domain_model_brand.libelle">
+				<source>Libelle</source>
+			</trans-unit>
+			<trans-unit id="tx_beerntmjm_domain_model_brand.logo" resname="tx_beerntmjm_domain_model_brand.logo">
+				<source>Logo</source>
+			</trans-unit>
+			<trans-unit id="tx_beerntmjm_domain_model_theme" resname="tx_beerntmjm_domain_model_theme">
+				<source>Theme</source>
+			</trans-unit>
+			<trans-unit id="tx_beerntmjm_domain_model_theme.title" resname="tx_beerntmjm_domain_model_theme.title">
+				<source>Title</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

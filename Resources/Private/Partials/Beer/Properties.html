@@ -1,0 +1,26 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<table class="tx-beer-ntmjm">
+	<tr>
+		<td><f:translate key="tx_beerntmjm_domain_model_beer.name" /></td>
+		<td>{beer.name}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_beerntmjm_domain_model_beer.image" /></td>
+		<td>
+				<f:image src="{beer.image.originalResource.publicUrl}" width="200"/>
+            </td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_beerntmjm_domain_model_beer.flavour" /></td>
+		<td>{beer.flavour}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_beerntmjm_domain_model_beer.description" /></td>
+		<td>{beer.description}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_beerntmjm_domain_model_beer.degree" /></td>
+		<td>{beer.degree}</td>
+	</tr>
+</table>
+</html>

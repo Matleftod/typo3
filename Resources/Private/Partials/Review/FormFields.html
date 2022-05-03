@@ -1,0 +1,22 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<label for="content">
+	<f:translate key="tx_beerntmjm_domain_model_review.content" />
+</label><br />
+	<f:form.textarea property="content" id="content" cols="40" rows="15" /><br />
+<label for="mark">
+	<f:translate key="tx_beerntmjm_domain_model_review.mark" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.textfield property="mark" id="mark" /><br />
+<label for="username">
+	<f:translate key="tx_beerntmjm_domain_model_review.username" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.textfield property="username" id="username" /><br />
+<label for="date">
+	<f:translate key="tx_beerntmjm_domain_model_review.date" />
+</label><br />
+	<f:form.textfield property="date" id="date" value="{review.date->f:format.date()}" /><br />
+<label for="validated">
+	<f:translate key="tx_beerntmjm_domain_model_review.validated" />
+</label><br />
+	<f:form.checkbox property="validated" id="validated" value="1" /><br />
+</html>
