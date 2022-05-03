@@ -21,6 +21,21 @@ class BrandController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
 
     /**
+     * brandRepository
+     *
+     * @var \Matleftod\BrandNtmjm\Domain\Repository\BrandRepository
+     */
+    protected $brandRepository = null;
+
+    /**
+     * @param \Matleftod\BeerNtmjm\Domain\Repository\BrandRepository $brandRepository
+     */
+    public function injectBrandRepository(\Matleftod\BeerNtmjm\Domain\Repository\BrandRepository $brandRepository)
+    {
+        $this->brandRepository = $brandRepository;
+    }
+
+    /**
      * action list
      *
      * @return \Psr\Http\Message\ResponseInterface

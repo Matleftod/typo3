@@ -3,14 +3,14 @@
         {
             "config": {
                 "position": [
-                    669.6666717529297,
-                    89.3333330154419
+                    669,
+                    89.33333337306976
                 ]
             },
             "name": "New Model Object",
             "value": {
                 "actionGroup": {
-                    "_default0_index": true,
+                    "_default0_index": false,
                     "_default1_list": true,
                     "_default2_show": true,
                     "_default3_new_create": false,
@@ -174,8 +174,8 @@
         {
             "config": {
                 "position": [
-                    374.6666717529297,
-                    9.333333015441895
+                    374,
+                    9.333333373069763
                 ]
             },
             "name": "New Model Object",
@@ -227,8 +227,8 @@
         {
             "config": {
                 "position": [
-                    154.6666717529297,
-                    8.333333015441895
+                    154,
+                    8.333333373069763
                 ]
             },
             "name": "New Model Object",
@@ -280,8 +280,8 @@
         {
             "config": {
                 "position": [
-                    375.6666717529297,
-                    189.3333330154419
+                    375,
+                    189.33333337306976
                 ]
             },
             "name": "New Model Object",
@@ -333,8 +333,8 @@
         {
             "config": {
                 "position": [
-                    154.6666717529297,
-                    188.3333330154419
+                    154,
+                    188.33333337306976
                 ]
             },
             "name": "New Model Object",
@@ -434,8 +434,8 @@
         {
             "config": {
                 "position": [
-                    153.6666717529297,
-                    361.3333330154419
+                    153,
+                    361.33333337306976
                 ]
             },
             "name": "New Model Object",
@@ -499,8 +499,8 @@
         {
             "config": {
                 "position": [
-                    373.6666717529297,
-                    361.3333330154419
+                    373,
+                    361.33333337306976
                 ]
             },
             "name": "New Model Object",
@@ -710,7 +710,7 @@
     ],
     "storagePath": "C:\/wamp64\/www\/CMS\/typo3td\/packages\/",
     "log": {
-        "last_modified": "2022-05-03 09:25",
+        "last_modified": "2022-05-03 01:14",
         "extension_builder_version": "v11.0.1",
         "be_user": " (1)"
     }

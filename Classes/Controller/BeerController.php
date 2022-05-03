@@ -36,16 +36,6 @@ class BeerController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     }
 
     /**
-     * action index
-     *
-     * @return \Psr\Http\Message\ResponseInterface
-     */
-    public function indexAction(): \Psr\Http\Message\ResponseInterface
-    {
-        return $this->htmlResponse();
-    }
-
-    /**
      * action list
      *
      * @return \Psr\Http\Message\ResponseInterface

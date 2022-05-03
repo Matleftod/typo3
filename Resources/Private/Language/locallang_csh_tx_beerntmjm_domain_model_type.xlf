@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="EXT:beer_ntmjm/Resources/Private/Language/locallang_csh_tx_beerntmjm_domain_model_type.xlf" date="2022-05-03T09:25:05Z" product-name="beer_ntmjm">
+	<file source-language="en" datatype="plaintext" original="EXT:beer_ntmjm/Resources/Private/Language/locallang_csh_tx_beerntmjm_domain_model_type.xlf" date="2022-05-03T13:14:56Z" product-name="beer_ntmjm">
 		<header/>
 		<body>
 			<trans-unit id="libelle.description" resname="libelle.description">
