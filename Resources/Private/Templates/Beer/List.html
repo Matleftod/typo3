@@ -24,6 +24,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
             <th><f:translate key="tx_beerntmjm_domain_model_beer.image" /></th>
             <th><f:translate key="tx_beerntmjm_domain_model_beer.flavour" /></th>
             <th><f:translate key="tx_beerntmjm_domain_model_beer.description" /></th>
+            <th> Brand </th>
             <th><f:translate key="tx_beerntmjm_domain_model_beer.degree" /></th>
             <th></th>
             <th></th>
@@ -34,6 +35,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
                 <td><f:link.action action="show" arguments="{beer : beer}">{beer.image.originalResource.name}</f:link.action></td>
                 <td><f:link.action action="show" arguments="{beer : beer}">{beer.flavour}</f:link.action></td>
                 <td><f:link.action action="show" arguments="{beer : beer}">{beer.description}</f:link.action></td>
+                <td><f:link.action action="list" arguments="{brand : beer.brand}">{beer.brand.libelle}</f:link.action></td>
                 <td><f:link.action action="show" arguments="{beer : beer}">{beer.degree}</f:link.action></td>
                 <td><f:link.action action="edit" arguments="{beer : beer}">Edit</f:link.action></td>
                 <td><f:link.action action="delete" arguments="{beer : beer}">Delete</f:link.action></td>

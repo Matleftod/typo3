@@ -38,11 +38,12 @@ class BeerController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     /**
      * action list
      *
+     * @param \Matleftod\BeerNtmjm\Domain\Model\Brand $brand
      * @return \Psr\Http\Message\ResponseInterface
      */
-    public function listAction(): \Psr\Http\Message\ResponseInterface
+    public function listAction(?\Matleftod\BeerNtmjm\Domain\Model\Brand $brand = null): \Psr\Http\Message\ResponseInterface
     {
-        $beers = $this->beerRepository->findAll();
+        $beers = $this->beerRepository->filter($brand);
         $this->view->assign('beers', $beers);
         return $this->htmlResponse();
     }

@@ -19,4 +19,12 @@ namespace Matleftod\BeerNtmjm\Domain\Repository;
  */
 class BeerRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
+    public function filter(?\Matleftod\BeerNtmjm\Domain\Model\Brand $brand = null)
+    {
+        $query = $this->createQuery();
+        if($brand !== null){
+            $query->matching($query->equals('brand', $brand));
+        }
+        return $query->execute();
+    }
 }
