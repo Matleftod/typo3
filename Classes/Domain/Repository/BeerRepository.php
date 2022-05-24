@@ -27,4 +27,14 @@ class BeerRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         }
         return $query->execute();
     }
+
+    public function search(\Matleftod\BeerNtmjm\Controller\Query\BeerSearch $search)
+    {
+        $query = $this->createQuery();
+        $query->matching($query->logicalOr(
+            $query->like('name', '%' . $search->getKeyWord() . '%'),
+            $query->like('description', '%' . $search->getKeyWord() . '%')
+        ));        
+        return $query->execute();
+    }
 }

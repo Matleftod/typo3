@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Matleftod\BeerNtmjm\Controller;
 
+use  Matleftod\BeerNtmjm\Controller\Query\BeerSearch;
 
 /**
  * This file is part of the "Biere NTMJM" Extension for TYPO3 CMS.
@@ -63,10 +64,13 @@ class BeerController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     /**
      * action search
      *
+     * @param \Matleftod\BeerNtmjm\Controller\Query\BeerSearch $search
      * @return \Psr\Http\Message\ResponseInterface
      */
-    public function searchAction(): \Psr\Http\Message\ResponseInterface
+    public function searchAction(BeerSearch $search): \Psr\Http\Message\ResponseInterface
     {
+        $beers = $this->beerRepository->search($search);
+        $this->view->assign('beers', $beers);
         return $this->htmlResponse();
     }
 

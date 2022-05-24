@@ -18,6 +18,11 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
     <f:flashMessages />
 
+    <f:form action="search" name="search" object="{search}">
+      <f:form.textfield property="keyWord" value="" />
+    <f:form.submit value="Rechercher" />
+    </f:form>
+
     <table class="tx_beerntmjm">
         <tr>
             <th><f:translate key="tx_beerntmjm_domain_model_beer.name" /></th>
