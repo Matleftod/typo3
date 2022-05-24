@@ -1,50 +1,49 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:layout name="Default" />
+<f:layout name="Default" /> This template is responsible for creating a table of domain objects. If you modify this template, do not forget to change the overwrite settings in /Configuration/ExtensionBuilder/settings.yaml: Resources: Private: Templates: Beer: List.html: keep Otherwise
+your changes will be overwritten the next time you save the extension in the extension builder
 
-This template is responsible for creating a table of domain objects.
 
-If you modify this template, do not forget to change the overwrite settings
-in /Configuration/ExtensionBuilder/settings.yaml:
-  Resources:
-    Private:
-      Templates:
-        Beer:
-          List.html: keep
-
-Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="content">
-    <h1>Listing for Beer</h1>
 
     <f:flashMessages />
-
+    <h1 style='text-align: center; font-weight: bold;'> Découvrez nos différentes variétés de bières</h1>
     <f:render partial="Beer/SearchForm" />
 
-    <table class="tx_beerntmjm">
-        <tr>
-            <th><f:translate key="tx_beerntmjm_domain_model_beer.name" /></th>
-            <th><f:translate key="tx_beerntmjm_domain_model_beer.image" /></th>
-            <th><f:translate key="tx_beerntmjm_domain_model_beer.flavour" /></th>
-            <th><f:translate key="tx_beerntmjm_domain_model_beer.description" /></th>
-            <th> Brand </th>
-            <th><f:translate key="tx_beerntmjm_domain_model_beer.degree" /></th>
-            <th></th>
-            <th></th>
-        </tr>
-        <f:for each="{beers}" as="beer">
-            <tr>
-                <td><f:link.action action="show" arguments="{beer : beer}">{beer.name}</f:link.action></td>
-                <td><f:link.action action="show" arguments="{beer : beer}">{beer.image.originalResource.name}</f:link.action></td>
-                <td><f:link.action action="show" arguments="{beer : beer}">{beer.flavour}</f:link.action></td>
-                <td><f:link.action action="show" arguments="{beer : beer}">{beer.description}</f:link.action></td>
-                <td><f:link.action action="list" arguments="{brand : beer.brand}">{beer.brand.libelle}</f:link.action></td>
-                <td><f:link.action action="show" arguments="{beer : beer}">{beer.degree}</f:link.action></td>
-                <td><f:link.action action="edit" arguments="{beer : beer}">Edit</f:link.action></td>
-                <td><f:link.action action="delete" arguments="{beer : beer}">Delete</f:link.action></td>
-            </tr>
-        </f:for>
-    </table>
+    <div class="flexContainer">
 
-    <f:link.action action="new">New Beer</f:link.action>
+        <style>
+            .flexContainer {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px
+            }
+            
+            .thumbnail {
+                object-fit: contain;
+                width: 100%;
+            }
+            
+            .thumbnailContainer {
+                padding: 5px;
+                flex: 1 1 30%;
+                border: solid 5px;
+                border-radius: 10px;
+                border-color: #FFEFDF;
+            }
+        </style>
+
+
+        <f:for each="{beers}" as="beer">
+            <div class="thumbnailContainer">
+                <f:link.action action="list" arguments="{brand : beer.brand}"> {beer.brand.libelle} </f:link.action>
+                <f:link.action action="show" arguments="{beer : beer}"><img class='thumbnail' src={beer.image.originalResource.publicUrl}></f:link.action>
+                <span>{beer.name}</span>
+                <span style="float:right; color:grey" action="show" arguments="{beer : beer}">{beer.degree} °</span>
+            </div>
+        </f:for>
+
+    </div>
 </f:section>
+
 </html>

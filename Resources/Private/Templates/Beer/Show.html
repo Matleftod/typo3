@@ -1,30 +1,136 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:layout name="Default" />
-
-This template is responsible for displaying a single view for a domain object
-
-If you modify this template, do not forget to change the overwrite settings
-in /Configuration/ExtensionBuilder/settings.yaml:
-  Resources:
-    Private:
-      Templates:
-        Beer:
-          Show.html: keep
-
-Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+<f:layout name="Default" /> This template is responsible for displaying a single view for a domain object If you modify this template, do not forget to change the overwrite settings in /Configuration/ExtensionBuilder/settings.yaml: Resources: Private: Templates: Beer: Show.html:
+keep Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="content">
-    <h1>Single View for Beer</h1>
+    <h1>{beer.brand.libelle}</h1>
 
-    <f:flashMessages />
-    <f:render partial="Beer/Properties" arguments="{beer:beer}" />
-    <f:link.action action="list">Back to list</f:link.action><br />
+    <style>
+        body {
+            margin: 0;
+        }
+        
+        h1 {
+            margin: 0;
+        }
+        
+        p {
+            margin: 0;
+        }
+        
+        .page_container {
+            flex-direction: row;
+            display: flex;
+            padding-right: 3em;
+            padding-left: 3em;
+            padding-top: 2em;
+        }
+        
+        .picture {
+            border-width: 1px;
+            border-color: black;
+        }
+        
+        .vertical_container {
+            flex-direction: column;
+            display: flex;
+        }
+        
+        .right_content {
+            padding-left: 2em;
+            padding-right: 6em;
+        }
+        
+        .right_first_segment {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .ingredients_title {
+            font-weight: bold;
+        }
+        
+        #beer_category {
+            background-color: #c22a37;
+            padding: 10px 15px 10px 15px;
+            border-radius: 25px;
+            display: inline-block;
+            color: white;
+        }
+        
+        #basket_button {
+            background-color: #c22a37;
+            padding: 10px 25px 10px 25px;
+            border: none;
+            color: white;
+        }
+        
+        .right_content {
+            padding-left: 2em;
+        }
+        
+        #beer_name {
+            margin: 0px 0px 10px 0px;
+        }
+        
+        #beer_price {
+            margin: 0px 0px 30px 0px;
+            color: #808080;
+        }
+        
+        #beer_grade {
+            color: #808080;
+        }
+        
+        #beer_category {
+            margin: 0px 0px 30px 0px;
+        }
+        
+        #beer_description {
+            margin: 0px 0px 30px 0px;
+        }
+    </style>
 
-    <f:render partial="FormErrors" />
+    <div class="page_container">
+        <div class="vertical_container">
+            <div class="left_content">
+                <div>
+                    <img class="picture" src="{beer.image.originalResource.publicUrl}" alt="Picture of the beer product" width="300" height="300" />
+                    <h2 id="ingredients_title">Ingrédients</h2>
+                    <ul>
+                        <f:for each="{beer.ingredients}" as="ingredient">
+                            <li>{ingredient.libelle}</li>
+                        </f:for>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="vertical_container">
+            <div class="right_content">
+                <div class="right_first_segment">
+                    <div>
+                        <h1 id="beer_name">{beer.name}</h1>
+                        <p id="beer_price">{beer.degree} °</p>
+                    </div>
+                    <p id="beer_grade">note: 3/5</p>
+                </div>
+                <div id="beer_category">
+                    <p>
+                        <f:format.stripTags>{beer.flavour}</f:format.stripTags>
+                    </p>
+                </div>
+                <div id="beer_description">
+                    <p>
+                        <f:format.stripTags> {beer.description} </f:format.stripTags>
+                    </p>
+                </div>
 
-    <f:form action="create" name="newReview" object="{newReview}" controller="Review" arguments="{beer:beer}">
-    <f:render partial="Review/FormFields" />
-    <f:form.submit value="Create new" />
-    </f:form>
+            </div>
+        </div>
+    </div>
+    <f:link.action action="list"><button id="basket_button">Retour </button> </f:link.action>
 </f:section>
+
 </html>
