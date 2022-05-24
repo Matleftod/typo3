@@ -14,6 +14,8 @@ Otherwise your changes will be overwritten the next time you save the extension 
 <f:section name="content">
     <h1>Template for search action</h1>
 
+    <f:render partial="Beer/SearchForm" arguments="{search : search}"/>
+
     <table class="tx_beerntmjm">
       <tr>
           <th><f:translate key="tx_beerntmjm_domain_model_beer.name" /></th>

@@ -19,6 +19,12 @@ Otherwise your changes will be overwritten the next time you save the extension 
     <f:flashMessages />
     <f:render partial="Beer/Properties" arguments="{beer:beer}" />
     <f:link.action action="list">Back to list</f:link.action><br />
-    <f:link.action action="new">New Beer</f:link.action>
+
+    <f:render partial="FormErrors" />
+
+    <f:form action="create" name="newReview" object="{newReview}" controller="Review" arguments="{beer:beer}">
+    <f:render partial="Review/FormFields" />
+    <f:form.submit value="Create new" />
+    </f:form>
 </f:section>
 </html>

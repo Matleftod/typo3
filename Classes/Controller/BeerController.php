@@ -71,6 +71,7 @@ class BeerController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     {
         $beers = $this->beerRepository->search($search);
         $this->view->assign('beers', $beers);
+        $this->view->assign('search', $search);
         return $this->htmlResponse();
     }
 

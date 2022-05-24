@@ -47,6 +47,7 @@ class Review extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Date publication
      *
      * @var \DateTime
+     * @TYPO3\CMS\Extbase\Annotation\Validate("DateTime")
      */
     protected $date = null;
 
