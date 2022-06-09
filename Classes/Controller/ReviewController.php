@@ -73,6 +73,6 @@ class ReviewController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         $beer->addReview($newReview);
         $this->reviewRepository->add($newReview);
         $this->beerRepository->add($beer);
-        //$this->redirect('show', "Beer", null, ["beer"=>$beer]);
+        $this->redirect('show', "Beer", null, ["beer"=>$beer]);
     }
 }
